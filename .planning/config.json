@@ -1,11 +1,15 @@
 {
   "model_profile": "balanced",
-  "commit_docs": true,
+  "commit_docs": false,
   "parallelization": true,
   "search_gitignored": false,
   "brave_search": false,
   "firecrawl": false,
   "exa_search": false,
+  "sub_repos": [
+    "backend",
+    "frontend"
+  ],
   "git": {
     "branching_strategy": "none",
     "phase_branch_template": "gsd/phase-{phase}-{slug}",
@@ -25,7 +29,8 @@
     "text_mode": false,
     "research_before_questions": false,
     "discuss_mode": "discuss",
-    "skip_discuss": false
+    "skip_discuss": false,
+    "_auto_chain_active": false
   },
   "hooks": {
     "context_warnings": true
