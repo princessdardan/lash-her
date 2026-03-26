@@ -49,14 +49,16 @@ Plans:
   3. The block renderer correctly renders all 14 layout block types — no blank blocks, no console errors about unrecognized _type values
   4. /training-programs/[slug] generates static params from a GROQ query (not a hardcoded list) and each slug resolves to the correct program
   5. TypeScript compilation passes with strict mode — no implicit any, no TStrapiResponse references remaining
-**Plans**: 4 plans
+**Plans**: 6 plans
 **UI hint**: yes
 
 Plans:
 - [x] 02-01-PLAN.md — Rename Strapi files, rewrite types for Sanity shapes, create SanityImage component, add CDN pattern
 - [x] 02-02-PLAN.md — Create GROQ-based loaders and update block renderer registry keys
 - [x] 02-03-PLAN.md — Update all layout components and main menu for Sanity prop types
-- [ ] 02-04-PLAN.md — Wire all pages and site layout to Sanity loaders
+- [x] 02-04-PLAN.md — Wire all pages and site layout to Sanity loaders
+- [ ] 02-05-PLAN.md — Gap closure: fix mobile navigation and form component type errors
+- [ ] 02-06-PLAN.md — Gap closure: fix CTA components, block renderer, footer, and global error type errors
 
 ### Phase 3: Rich Text and Portable Text Renderer
 **Goal**: All rich-text content in the site (info sections, training program descriptions, any body copy) renders with correct brand styling using the new Portable Text renderer, with no naming collision against the legacy renderer
@@ -110,7 +112,7 @@ Phases execute in order: 1 → 2 → 3 → 4 → 5 → 6 (Phases 3 and 4 can run
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Schema, Studio, and Infrastructure | 4/4 | Complete | 2026-03-25 |
-| 2. Data Layer and Image Pipeline | 2/4 | In Progress|  |
+| 2. Data Layer and Image Pipeline | 4/6 | In Progress|  |
 | 3. Rich Text and Portable Text Renderer | 0/? | Not started | - |
 | 4. Forms and Email | 0/? | Not started | - |
 | 5. Cache Revalidation | 0/? | Not started | - |
