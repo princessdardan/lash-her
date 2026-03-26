@@ -57,7 +57,7 @@ Plans:
 - [x] 02-02-PLAN.md — Create GROQ-based loaders and update block renderer registry keys
 - [x] 02-03-PLAN.md — Update all layout components and main menu for Sanity prop types
 - [x] 02-04-PLAN.md — Wire all pages and site layout to Sanity loaders
-- [ ] 02-05-PLAN.md — Gap closure: fix mobile navigation and form component type errors
+- [x] 02-05-PLAN.md — Gap closure: fix mobile navigation and form component type errors
 - [x] 02-06-PLAN.md — Gap closure: fix CTA components, block renderer, footer, and global error type errors
 
 ### Phase 3: Rich Text and Portable Text Renderer
