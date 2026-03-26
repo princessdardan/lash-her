@@ -30,8 +30,8 @@ Every page, form, image, and interaction that works today must work identically 
 
 ### Active
 
-- [ ] Sanity schema design mirroring all Strapi content types and components
-- [ ] Sanity Studio embedded in Next.js at /studio route
+- [x] Sanity schema design mirroring all Strapi content types and components — Validated in Phase 1
+- [x] Sanity Studio embedded in Next.js at /studio route — Validated in Phase 1
 - [ ] GROQ-based data loaders replacing Strapi REST API calls
 - [ ] Sanity image pipeline replacing Strapi uploads and Vercel Blob
 - [ ] Automated content migration scripts (Strapi → Sanity)
@@ -78,7 +78,7 @@ Every page, form, image, and interaction that works today must work identically 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
 | Big bang cutover (not incremental) | Content volume is small, project isn't high-traffic — simpler to build and swap | — Pending |
-| Sanity Studio embedded in Next.js | Single deployment, shared auth context, simpler ops | — Pending |
+| Sanity Studio embedded in Next.js | Single deployment, shared auth context, simpler ops | ✓ Phase 1 |
 | All images to Sanity CDN | Consolidate image sources, leverage Sanity's image pipeline (transforms, hotspot, CDN) | — Pending |
 | Forms as Sanity documents + webhook emails | Keep form data in CMS, trigger emails externally — replaces Strapi lifecycle hooks | — Pending |
 | Free tier Sanity | Content volume is small, free tier is sufficient | — Pending |
@@ -102,4 +102,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-24 after initialization*
+*Last updated: 2026-03-25 after Phase 1 completion*

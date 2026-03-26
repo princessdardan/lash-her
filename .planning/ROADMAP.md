@@ -54,7 +54,7 @@ Plans:
 
 Plans:
 - [x] 02-01-PLAN.md — Rename Strapi files, rewrite types for Sanity shapes, create SanityImage component, add CDN pattern
-- [ ] 02-02-PLAN.md — Create GROQ-based loaders and update block renderer registry keys
+- [x] 02-02-PLAN.md — Create GROQ-based loaders and update block renderer registry keys
 - [ ] 02-03-PLAN.md — Update all layout components and main menu for Sanity prop types
 - [ ] 02-04-PLAN.md — Wire all pages and site layout to Sanity loaders
 
@@ -110,7 +110,7 @@ Phases execute in order: 1 → 2 → 3 → 4 → 5 → 6 (Phases 3 and 4 can run
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Schema, Studio, and Infrastructure | 4/4 | Complete | 2026-03-25 |
-| 2. Data Layer and Image Pipeline | 0/4 | Not started | - |
+| 2. Data Layer and Image Pipeline | 2/4 | In Progress|  |
 | 3. Rich Text and Portable Text Renderer | 0/? | Not started | - |
 | 4. Forms and Email | 0/? | Not started | - |
 | 5. Cache Revalidation | 0/? | Not started | - |
