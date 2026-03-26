@@ -55,7 +55,7 @@ Plans:
 Plans:
 - [x] 02-01-PLAN.md — Rename Strapi files, rewrite types for Sanity shapes, create SanityImage component, add CDN pattern
 - [x] 02-02-PLAN.md — Create GROQ-based loaders and update block renderer registry keys
-- [ ] 02-03-PLAN.md — Update all layout components and main menu for Sanity prop types
+- [x] 02-03-PLAN.md — Update all layout components and main menu for Sanity prop types
 - [ ] 02-04-PLAN.md — Wire all pages and site layout to Sanity loaders
 
 ### Phase 3: Rich Text and Portable Text Renderer
