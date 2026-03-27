@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Schema, Studio, and Infrastructure** - Define all Sanity schemas, embed Studio at /studio, and wire up read/write clients
 - [ ] **Phase 2: Data Layer and Image Pipeline** - Replace all Strapi REST loaders with GROQ, update block renderer, build Sanity image component, wire all content pages
-- [ ] **Phase 3: Rich Text and Portable Text Renderer** - Build brand-styled PortableText renderer, rename legacy rich text component
+- [x] **Phase 3: Rich Text and Portable Text Renderer** - Build brand-styled PortableText renderer, rename legacy rich text component (completed 2026-03-27)
 - [ ] **Phase 4: Forms and Email** - Replace Strapi lifecycle hooks with Server Actions writing to Sanity + calling Resend directly
 - [ ] **Phase 5: Cache Revalidation** - Wire on-demand ISR via Sanity webhook calling revalidateTag
 - [ ] **Phase 6: Content Migration and Cleanup** - Run migration scripts against staging then production, verify, and remove Strapi
@@ -71,7 +71,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 03-01-PLAN.md — Install @portabletext/react, build PortableTextRenderer with brand component map, wire into all layout consumers
+- [x] 03-01-PLAN.md — Install @portabletext/react, build PortableTextRenderer with brand component map, wire into all layout consumers
 
 ### Phase 4: Forms and Email
 **Goal**: Both contact forms submit successfully, store the submission as a Sanity document, and trigger Resend admin notification and user confirmation emails — with no dependency on the Strapi backend
@@ -115,7 +115,7 @@ Phases execute in order: 1 → 2 → 3 → 4 → 5 → 6 (Phases 3 and 4 can run
 |-------|----------------|--------|-----------|
 | 1. Schema, Studio, and Infrastructure | 4/4 | Complete | 2026-03-25 |
 | 2. Data Layer and Image Pipeline | 4/6 | In Progress|  |
-| 3. Rich Text and Portable Text Renderer | 0/1 | Not started | - |
+| 3. Rich Text and Portable Text Renderer | 1/1 | Complete   | 2026-03-27 |
 | 4. Forms and Email | 0/? | Not started | - |
 | 5. Cache Revalidation | 0/? | Not started | - |
 | 6. Content Migration and Cleanup | 0/? | Not started | - |
