@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Ready to plan
-stopped_at: Completed 04-forms-and-email/04-01-PLAN.md
-last_updated: "2026-03-27T19:01:28.456Z"
+status: Executing Phase 04
+stopped_at: Phase 4 UI-SPEC approved
+last_updated: "2026-03-27T18:44:38.973Z"
 progress:
   total_phases: 6
-  completed_phases: 1
-  total_plans: 9
-  completed_plans: 5
+  completed_phases: 3
+  total_plans: 13
+  completed_plans: 11
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Every page, form, image, and interaction that works today must work identically after migration — zero regression in the production user experience.
-**Current focus:** Phase 03 — rich-text-and-portable-text-renderer
+**Current focus:** Phase 04 — forms-and-email
 
 ## Current Position
 
-Phase: 4
-Plan: Not started
+Phase: 04 (forms-and-email) — EXECUTING
+Plan: 1 of 2
 
 ## Performance Metrics
 
@@ -54,7 +54,6 @@ Plan: Not started
 | Phase 02-data-layer-and-image-pipeline P03 | 4min | 2 tasks | 11 files |
 | Phase 02-data-layer-and-image-pipeline P04 | 218s | 2 tasks | 8 files |
 | Phase 02-data-layer-and-image-pipeline P06 | 192s | 2 tasks | 6 files |
-| Phase 04-forms-and-email P01 | 14min | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -84,9 +83,6 @@ Recent decisions affecting current work:
 - [Phase 02-04]: All pages use direct null-check pattern (notFound()) — no validateApiResponse wrapper needed with GROQ loaders returning T | null
 - [Phase 02-04]: root app/layout.tsx metadata had .data wrapper (bug) — fixed to use Sanity flat object access
 - [Phase 02-data-layer-and-image-pipeline]: block-renderer.tsx replaced entirely with Portable Text stub — full renderer deferred to Phase 3 RT-01
-- [Phase 04-forms-and-email]: SANITY_FORM_TOKEN uses editor role — free tier has no create-only scoped permissions, least privilege via separate token not permission layer
-- [Phase 04-forms-and-email]: sendFormEmails uses Promise.allSettled and does not re-throw — Server Action caller wraps in try/catch per D-06
-- [Phase 04-forms-and-email]: Resend SDK v3+ returns { data, error } instead of throwing — error property must be checked explicitly in sendAdminNotification and sendUserConfirmation
 
 ### Pending Todos
 
@@ -100,6 +96,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-27T19:01:28.454Z
-Stopped at: Completed 04-forms-and-email/04-01-PLAN.md
-Resume file: None
+Last session: 2026-03-27T03:22:09.438Z
+Stopped at: Phase 4 UI-SPEC approved
+Resume file: .planning/phases/04-forms-and-email/04-UI-SPEC.md
