@@ -35,8 +35,8 @@ Every page, form, image, and interaction that works today must work identically 
 - [ ] GROQ-based data loaders replacing Strapi REST API calls
 - [ ] Sanity image pipeline replacing Strapi uploads and Vercel Blob
 - [ ] Automated content migration scripts (Strapi → Sanity)
-- [ ] Form submissions stored as Sanity documents
-- [ ] Email notifications via Sanity webhook or serverless function (Resend)
+- [x] Form submissions stored as Sanity documents — Validated in Phase 4
+- [x] Email notifications via Resend Server Actions — Validated in Phase 4
 - [x] Block renderer adapted for Sanity portable text and object arrays — Validated in Phase 2
 - [x] Rich text rendering via Sanity's Portable Text — Validated in Phase 3
 - [ ] Remove Strapi backend entirely after migration complete
@@ -80,7 +80,7 @@ Every page, form, image, and interaction that works today must work identically 
 | Big bang cutover (not incremental) | Content volume is small, project isn't high-traffic — simpler to build and swap | — Pending |
 | Sanity Studio embedded in Next.js | Single deployment, shared auth context, simpler ops | ✓ Phase 1 |
 | All images to Sanity CDN | Consolidate image sources, leverage Sanity's image pipeline (transforms, hotspot, CDN) | — Pending |
-| Forms as Sanity documents + webhook emails | Keep form data in CMS, trigger emails externally — replaces Strapi lifecycle hooks | — Pending |
+| Forms as Sanity documents + Server Action emails | Keep form data in CMS, send emails via Resend in Server Actions — replaces Strapi lifecycle hooks | ✓ Phase 4 |
 | Free tier Sanity | Content volume is small, free tier is sufficient | — Pending |
 | Automated content migration scripts | Ensures accuracy and repeatability vs manual re-entry | — Pending |
 
