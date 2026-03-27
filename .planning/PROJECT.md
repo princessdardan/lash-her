@@ -37,8 +37,8 @@ Every page, form, image, and interaction that works today must work identically 
 - [ ] Automated content migration scripts (Strapi → Sanity)
 - [ ] Form submissions stored as Sanity documents
 - [ ] Email notifications via Sanity webhook or serverless function (Resend)
-- [ ] Block renderer adapted for Sanity portable text and object arrays
-- [ ] Rich text rendering via Sanity's Portable Text
+- [x] Block renderer adapted for Sanity portable text and object arrays — Validated in Phase 2
+- [x] Rich text rendering via Sanity's Portable Text — Validated in Phase 3
 - [ ] Remove Strapi backend entirely after migration complete
 
 ### Out of Scope
@@ -102,4 +102,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-25 after Phase 1 completion*
+*Last updated: 2026-03-27 after Phase 3 completion*
