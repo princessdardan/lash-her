@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Schema, Studio, and Infrastructure** - Define all Sanity schemas, embed Studio at /studio, and wire up read/write clients
 - [ ] **Phase 2: Data Layer and Image Pipeline** - Replace all Strapi REST loaders with GROQ, update block renderer, build Sanity image component, wire all content pages
 - [x] **Phase 3: Rich Text and Portable Text Renderer** - Build brand-styled PortableText renderer, rename legacy rich text component (completed 2026-03-27)
-- [ ] **Phase 4: Forms and Email** - Replace Strapi lifecycle hooks with Server Actions writing to Sanity + calling Resend directly
+- [x] **Phase 4: Forms and Email** - Replace Strapi lifecycle hooks with Server Actions writing to Sanity + calling Resend directly (completed 2026-03-27)
 - [ ] **Phase 5: Cache Revalidation** - Wire on-demand ISR via Sanity webhook calling revalidateTag
 - [ ] **Phase 6: Content Migration and Cleanup** - Run migration scripts against staging then production, verify, and remove Strapi
 
@@ -86,7 +86,7 @@ Plans:
 
 Plans:
 - [x] 04-01-PLAN.md — Install resend, create form Sanity client and email module with all 4 HTML templates
-- [ ] 04-02-PLAN.md — Create Server Actions and wire both form components
+- [x] 04-02-PLAN.md — Create Server Actions and wire both form components
 
 ### Phase 5: Cache Revalidation
 **Goal**: Publishing any document in Sanity Studio causes the corresponding page to reflect updated content within seconds, without waiting for the 30-minute ISR polling interval
@@ -120,6 +120,6 @@ Phases execute in order: 1 → 2 → 3 → 4 → 5 → 6 (Phases 3 and 4 can run
 | 1. Schema, Studio, and Infrastructure | 4/4 | Complete | 2026-03-25 |
 | 2. Data Layer and Image Pipeline | 4/6 | In Progress|  |
 | 3. Rich Text and Portable Text Renderer | 1/1 | Complete   | 2026-03-27 |
-| 4. Forms and Email | 1/2 | In Progress|  |
+| 4. Forms and Email | 2/2 | Complete   | 2026-03-27 |
 | 5. Cache Revalidation | 0/? | Not started | - |
 | 6. Content Migration and Cleanup | 0/? | Not started | - |
