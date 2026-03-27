@@ -128,6 +128,14 @@ None — no external service configuration required.
 - Phase 4 (forms) can proceed — no rich text dependencies blocking it
 - Content migration (Phase 5) will render headings, lists, and links correctly once Sanity content is populated
 
+## Self-Check: PASSED
+
+- `frontend/src/components/ui/portable-text-renderer.tsx` — FOUND
+- `frontend/src/components/ui/block-renderer.tsx` — CONFIRMED DELETED
+- Commit `1df583b` (Task 1) — FOUND
+- Commit `f7b350b` (Task 2) — FOUND
+- SUMMARY.md — FOUND
+
 ---
 *Phase: 03-rich-text-and-portable-text-renderer*
 *Completed: 2026-03-27*
