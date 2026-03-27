@@ -68,8 +68,10 @@ Plans:
   1. The legacy rich text component is renamed to strapi-rich-text-renderer.tsx and no import paths break
   2. Rich text content (headings, paragraphs, bold, italic, lists, links) in any layout block renders visually identically to the current Strapi-backed site
   3. The PortableTextRenderer component is importable and renders without errors when given a Portable Text array from Sanity
-**Plans**: TBD
-**UI hint**: yes
+**Plans**: 1 plan
+
+Plans:
+- [ ] 03-01-PLAN.md — Install @portabletext/react, build PortableTextRenderer with brand component map, wire into all layout consumers
 
 ### Phase 4: Forms and Email
 **Goal**: Both contact forms submit successfully, store the submission as a Sanity document, and trigger Resend admin notification and user confirmation emails — with no dependency on the Strapi backend
@@ -113,7 +115,7 @@ Phases execute in order: 1 → 2 → 3 → 4 → 5 → 6 (Phases 3 and 4 can run
 |-------|----------------|--------|-----------|
 | 1. Schema, Studio, and Infrastructure | 4/4 | Complete | 2026-03-25 |
 | 2. Data Layer and Image Pipeline | 4/6 | In Progress|  |
-| 3. Rich Text and Portable Text Renderer | 0/? | Not started | - |
+| 3. Rich Text and Portable Text Renderer | 0/1 | Not started | - |
 | 4. Forms and Email | 0/? | Not started | - |
 | 5. Cache Revalidation | 0/? | Not started | - |
 | 6. Content Migration and Cleanup | 0/? | Not started | - |
