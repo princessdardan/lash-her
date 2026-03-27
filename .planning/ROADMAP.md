@@ -82,7 +82,11 @@ Plans:
   2. Submitting the training contact form creates a new document in the Sanity contactForm collection visible in Studio
   3. Both form submissions trigger admin notification and user confirmation emails via Resend within seconds of submission
   4. The Sanity write token used by form Server Actions is scoped to create-only on contactForm and generalInquiry document types
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Install resend, create form Sanity client and email module with all 4 HTML templates
+- [ ] 04-02-PLAN.md — Create Server Actions and wire both form components
 
 ### Phase 5: Cache Revalidation
 **Goal**: Publishing any document in Sanity Studio causes the corresponding page to reflect updated content within seconds, without waiting for the 30-minute ISR polling interval
@@ -116,6 +120,6 @@ Phases execute in order: 1 → 2 → 3 → 4 → 5 → 6 (Phases 3 and 4 can run
 | 1. Schema, Studio, and Infrastructure | 4/4 | Complete | 2026-03-25 |
 | 2. Data Layer and Image Pipeline | 4/6 | In Progress|  |
 | 3. Rich Text and Portable Text Renderer | 1/1 | Complete   | 2026-03-27 |
-| 4. Forms and Email | 0/? | Not started | - |
+| 4. Forms and Email | 0/2 | Not started | - |
 | 5. Cache Revalidation | 0/? | Not started | - |
 | 6. Content Migration and Cleanup | 0/? | Not started | - |
