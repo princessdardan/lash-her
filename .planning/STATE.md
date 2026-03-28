@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Ready to plan
-stopped_at: Completed 04-forms-and-email 04-02-PLAN.md
-last_updated: "2026-03-27T19:18:02.926Z"
+status: Phase complete — ready for verification
+stopped_at: Completed 05-01-PLAN.md
+last_updated: "2026-03-28T00:37:58.686Z"
 progress:
   total_phases: 6
-  completed_phases: 4
-  total_plans: 13
-  completed_plans: 13
+  completed_phases: 5
+  total_plans: 14
+  completed_plans: 14
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Every page, form, image, and interaction that works today must work identically after migration — zero regression in the production user experience.
-**Current focus:** Phase 04 — forms-and-email
+**Current focus:** Phase 05 — cache-revalidation
 
 ## Current Position
 
-Phase: 5
-Plan: Not started
+Phase: 05 (cache-revalidation) — EXECUTING
+Plan: 1 of 1
 
 ## Performance Metrics
 
@@ -55,6 +55,7 @@ Plan: Not started
 | Phase 02-data-layer-and-image-pipeline P04 | 218s | 2 tasks | 8 files |
 | Phase 02-data-layer-and-image-pipeline P06 | 192s | 2 tasks | 6 files |
 | Phase 04-forms-and-email P02 | 270s | 2 tasks | 4 files |
+| Phase 05-cache-revalidation P01 | 287 | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -87,6 +88,9 @@ Recent decisions affecting current work:
 - [Phase 04-02]: form-validation.ts auto-created as blocking dependency missing from repo but imported by both form components
 - [Phase 04-02]: sendFormEmails called without try/catch — Promise.allSettled inside means it never rejects (D-06)
 - [Phase 04-02]: Server Actions file uses module-level 'use server' directive (not per-function) — required for standalone action files in Next.js App Router
+- [Phase 05-cache-revalidation]: Tags use short canonical names ('global', 'menu') not Sanity _type strings — TYPE_TAG_MAP bridges the two naming spaces in the route handler
+- [Phase 05-cache-revalidation]: unstable_cache removed from layout — fetch-level tags handle revalidation without TTL wrapper, simplifying the caching model
+- [Phase 05-cache-revalidation]: SANITY_WEBHOOK_SECRET uses assertValue — app crashes at startup if missing to prevent silent security degradation (accepts unsigned requests)
 
 ### Pending Todos
 
@@ -100,6 +104,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-27T19:11:03.232Z
-Stopped at: Completed 04-forms-and-email 04-02-PLAN.md
+Last session: 2026-03-28T00:37:58.684Z
+Stopped at: Completed 05-01-PLAN.md
 Resume file: None

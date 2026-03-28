@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] **Phase 2: Data Layer and Image Pipeline** - Replace all Strapi REST loaders with GROQ, update block renderer, build Sanity image component, wire all content pages
 - [x] **Phase 3: Rich Text and Portable Text Renderer** - Build brand-styled PortableText renderer, rename legacy rich text component (completed 2026-03-27)
 - [x] **Phase 4: Forms and Email** - Replace Strapi lifecycle hooks with Server Actions writing to Sanity + calling Resend directly (completed 2026-03-27)
-- [ ] **Phase 5: Cache Revalidation** - Wire on-demand ISR via Sanity webhook calling revalidateTag
+- [x] **Phase 5: Cache Revalidation** - Wire on-demand ISR via Sanity webhook calling revalidateTag (completed 2026-03-28)
 - [ ] **Phase 6: Content Migration and Cleanup** - Run migration scripts against staging then production, verify, and remove Strapi
 
 ## Phase Details
@@ -96,7 +96,10 @@ Plans:
   1. Editing and publishing a document in Sanity Studio triggers a POST to /api/revalidate within seconds (visible in Vercel function logs)
   2. The revalidate endpoint rejects requests with an invalid or missing webhook signature and returns 401
   3. After a valid webhook fires, a hard refresh of the corresponding page shows the updated content without waiting for ISR interval expiry
-**Plans**: TBD
+**Plans**: 1 plan
+
+Plans:
+- [x] 05-01-PLAN.md — Add cache tags to all loaders, migrate layout off unstable_cache, create webhook Route Handler with HMAC verification
 
 ### Phase 6: Content Migration and Cleanup
 **Goal**: All existing Strapi content exists in Sanity as published documents, the site runs entirely on Sanity, and the Strapi backend and all Strapi-specific code is removed
@@ -121,5 +124,5 @@ Phases execute in order: 1 → 2 → 3 → 4 → 5 → 6 (Phases 3 and 4 can run
 | 2. Data Layer and Image Pipeline | 4/6 | In Progress|  |
 | 3. Rich Text and Portable Text Renderer | 1/1 | Complete   | 2026-03-27 |
 | 4. Forms and Email | 2/2 | Complete   | 2026-03-27 |
-| 5. Cache Revalidation | 0/? | Not started | - |
+| 5. Cache Revalidation | 1/1 | Complete   | 2026-03-28 |
 | 6. Content Migration and Cleanup | 0/? | Not started | - |
