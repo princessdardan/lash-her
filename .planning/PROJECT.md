@@ -32,8 +32,9 @@ Every page, form, image, and interaction that works today must work identically 
 
 - [x] Sanity schema design mirroring all Strapi content types and components — Validated in Phase 1
 - [x] Sanity Studio embedded in Next.js at /studio route — Validated in Phase 1
-- [ ] GROQ-based data loaders replacing Strapi REST API calls
-- [ ] Sanity image pipeline replacing Strapi uploads and Vercel Blob
+- [x] GROQ-based data loaders replacing Strapi REST API calls — Validated in Phase 2
+- [x] Sanity image pipeline replacing Strapi uploads and Vercel Blob — Validated in Phase 2
+- [x] On-demand cache revalidation via Sanity webhook + revalidateTag — Validated in Phase 5
 - [ ] Automated content migration scripts (Strapi → Sanity)
 - [x] Form submissions stored as Sanity documents — Validated in Phase 4
 - [x] Email notifications via Resend Server Actions — Validated in Phase 4
@@ -102,4 +103,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-27 after Phase 3 completion*
+*Last updated: 2026-03-28 after Phase 5 completion*
