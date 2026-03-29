@@ -58,7 +58,7 @@ Requirements for the complete Strapi 5 → Sanity CMS migration. Each maps to ro
 - [ ] **MIG-03**: Migration script converts Strapi Blocks rich text JSON to Sanity Portable Text format
 - [ ] **MIG-04**: Migration script generates `_key` fields for all array items (nanoid) since Strapi uses integer IDs
 - [ ] **MIG-05**: Migration script explicitly publishes all documents after creation (not left as drafts)
-- [ ] **MIG-06**: Migration verified against staging dataset — document counts, image rendering, and page content match source
+- [ ] **MIG-06**: Migration verified against production dataset — document counts, image rendering, and page content match source
 
 ### Cleanup
 
