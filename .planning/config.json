@@ -7,7 +7,6 @@
   "firecrawl": false,
   "exa_search": false,
   "sub_repos": [
-    "backend",
     "frontend"
   ],
   "git": {

@@ -134,3 +134,14 @@ The app will crash at startup if `SANITY_WEBHOOK_SECRET` is not set — this is 
 ---
 *Phase: 05-cache-revalidation*
 *Completed: 2026-03-28*
+
+## Self-Check: PASSED
+
+- FOUND: frontend/src/data/loaders.ts (10 cache tags added)
+- FOUND: frontend/src/app/(site)/layout.tsx (unstable_cache removed)
+- FOUND: frontend/src/sanity/env.ts (webhookSecret export added)
+- FOUND: frontend/src/app/api/revalidate/route.ts (route handler created)
+- FOUND: .planning/phases/05-cache-revalidation/05-01-SUMMARY.md
+- FOUND: commit 0e33d22 (frontend sub-repo — Task 1)
+- FOUND: commit 97c7a4a (frontend sub-repo — Task 2)
+- FOUND: commit 5b0efc5 (root repo — planning metadata)

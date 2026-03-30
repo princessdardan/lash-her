@@ -1,8 +1,8 @@
-# Lash Her — Strapi to Sanity Migration
+# Lash Her by Nataliea
 
 ## What This Is
 
-A full CMS migration of the Lash Her by Nataliea website from Strapi 5 to Sanity. The site is a content-driven marketing platform for a lash artistry and training business, built with Next.js 16 and currently powered by a Strapi 5 backend. This milestone replaces Strapi entirely with Sanity — content modeling, API layer, image pipeline, form submissions, email notifications, and content studio — while preserving every frontend feature and visual behavior.
+A content-driven marketing website for a lash artistry and training business, built with Next.js 16 and powered by Sanity as the headless CMS. Features CMS-driven page composition via layout blocks, two contact forms with email notifications, a photo gallery, training program pages with rich text, and an embedded content studio at /studio.
 
 ## Core Value
 
@@ -12,6 +12,17 @@ Every page, form, image, and interaction that works today must work identically 
 
 ### Validated
 
+- ✓ Sanity schema design mirroring all Strapi content types and components — v1.0
+- ✓ Sanity Studio embedded in Next.js at /studio route — v1.0
+- ✓ GROQ-based data loaders replacing Strapi REST API calls — v1.0
+- ✓ Sanity image pipeline replacing Strapi uploads and Vercel Blob — v1.0
+- ✓ On-demand cache revalidation via Sanity webhook + revalidateTag — v1.0
+- ✓ Automated content migration scripts (Strapi → Sanity) — v1.0
+- ✓ Form submissions stored as Sanity documents — v1.0
+- ✓ Email notifications via Resend Server Actions — v1.0
+- ✓ Block renderer adapted for Sanity portable text and object arrays — v1.0
+- ✓ Rich text rendering via Sanity's Portable Text — v1.0
+- ✓ Strapi backend removed entirely after migration — v1.0
 - ✓ CMS-driven homepage with dynamic zone blocks — existing
 - ✓ Contact page with general inquiry form and email notifications — existing
 - ✓ Photo gallery page — existing
@@ -23,84 +34,56 @@ Every page, form, image, and interaction that works today must work identically 
 - ✓ Block renderer pattern mapping CMS components to React components — existing
 - ✓ Scroll-based entrance animations on layout blocks — existing
 - ✓ Responsive header with scroll-hide behavior — existing
-- ✓ ISR caching strategy with stale-while-revalidate — existing
-- ✓ Image optimization via Next.js Image with remote patterns — existing
+- ✓ ISR caching strategy with on-demand revalidation — v1.0
+- ✓ Image optimization via Next.js Image with Sanity CDN — v1.0
 - ✓ SEO metadata from CMS — existing
 - ✓ Vercel Analytics and Speed Insights integration — existing
 
 ### Active
 
-- [x] Sanity schema design mirroring all Strapi content types and components — Validated in Phase 1
-- [x] Sanity Studio embedded in Next.js at /studio route — Validated in Phase 1
-- [x] GROQ-based data loaders replacing Strapi REST API calls — Validated in Phase 2
-- [x] Sanity image pipeline replacing Strapi uploads and Vercel Blob — Validated in Phase 2
-- [x] On-demand cache revalidation via Sanity webhook + revalidateTag — Validated in Phase 5
-- [ ] Automated content migration scripts (Strapi → Sanity)
-- [x] Form submissions stored as Sanity documents — Validated in Phase 4
-- [x] Email notifications via Resend Server Actions — Validated in Phase 4
-- [x] Block renderer adapted for Sanity portable text and object arrays — Validated in Phase 2
-- [x] Rich text rendering via Sanity's Portable Text — Validated in Phase 3
-- [ ] Remove Strapi backend entirely after migration complete
+(None — next milestone not yet planned)
 
 ### Out of Scope
 
-- New features or pages — migration only, feature parity
-- Strapi-to-Sanity real-time sync or dual-CMS operation — big bang cutover
+- Visual Editing via @sanity/presentation plugin — deferred to v2 (VE-01, VE-02)
+- TypeScript type generation via @sanity/codegen — deferred to v2 (DX-01)
+- Custom Sanity Studio plugins — deferred to v2 (DX-02)
 - Mobile app or native clients — web only
-- Redesign or visual changes — identical frontend appearance
-- Paid Sanity features — staying on free tier
+- Real-time GROQ subscriptions — ISR with on-demand revalidation is sufficient for a marketing site
+- Paid Sanity features — free tier is sufficient for content volume
 
 ## Context
 
-**Existing system:** Strapi 5 headless CMS with 7 single types (home-page, contact, gallery, global, main-menu, training, training-programs-page), 4 collection types (contact-form, general-inquiry, section, training-program), 14 layout components, 6 reusable sub-components, and 2 menu components. The frontend uses a unified API client (`data-api.ts`) with typed responses, centralized data loaders (`loaders.ts`), and a block renderer mapping Strapi dynamic zone `__component` values to React components.
-
-**Migration drivers:**
-1. **Sanity's editing UX** — real-time collaboration, structured content studio, better experience for content editors
-2. **Scaling/hosting** — eliminate Strapi Cloud costs and self-hosting burden; Sanity's hosted content lake
-3. **Developer experience** — GROQ queries, schema-as-code, better TypeScript support, content lake flexibility
-
-**Cutover strategy:** Big bang — build everything against Sanity, migrate all content via automated scripts, deploy in one swap. The existing Strapi production site continues to function until the Sanity-backed version is fully ready.
-
-**Content volume:** Small — a handful of pages, ~4 training programs, gallery images, form submissions. Manageable for automated migration scripts.
-
-**Sanity plan:** Free tier (generous limits for this content volume).
-
-## Constraints
-
-- **Tech stack**: Next.js 16 (App Router), React 18, TypeScript, Tailwind CSS v4 — unchanged
-- **Sanity Studio**: Embedded in Next.js via next-sanity (at /studio route)
-- **Images**: All images migrate to Sanity CDN with hotspot/crop support
-- **Forms**: Submissions stored as Sanity documents; emails triggered via webhook or serverless function using Resend
-- **Compatibility**: Node >=20, npm workspaces retained for frontend (backend workspace removed post-migration)
-- **Zero regression**: All existing pages, forms, animations, and interactions must work identically
+Shipped v1.0 with 6,932 LOC TypeScript across 26 files.
+Tech stack: Next.js 16 (App Router), Sanity v3, Tailwind CSS v4, Radix UI, Motion, Resend, Playwright.
+Content: 7 singleton pages, 3 collection types (training programs, form submissions), 33 Sanity schema types.
+Deployed on Vercel with on-demand ISR via Sanity webhook.
+Migration from Strapi 5 completed in 6 days with zero frontend regression.
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Big bang cutover (not incremental) | Content volume is small, project isn't high-traffic — simpler to build and swap | — Pending |
-| Sanity Studio embedded in Next.js | Single deployment, shared auth context, simpler ops | ✓ Phase 1 |
-| All images to Sanity CDN | Consolidate image sources, leverage Sanity's image pipeline (transforms, hotspot, CDN) | — Pending |
-| Forms as Sanity documents + Server Action emails | Keep form data in CMS, send emails via Resend in Server Actions — replaces Strapi lifecycle hooks | ✓ Phase 4 |
-| Free tier Sanity | Content volume is small, free tier is sufficient | — Pending |
-| Automated content migration scripts | Ensures accuracy and repeatability vs manual re-entry | — Pending |
+| Big bang cutover (not incremental) | Content volume is small, project isn't high-traffic — simpler to build and swap | ✓ Good — completed in 6 days |
+| Sanity Studio embedded in Next.js | Single deployment, shared auth context, simpler ops | ✓ Good — works at /studio |
+| All images to Sanity CDN | Consolidate image sources, leverage Sanity's image pipeline (transforms, hotspot, CDN) | ✓ Good — all images serving from cdn.sanity.io |
+| Forms as Sanity documents + Server Action emails | Keep form data in CMS, send emails via Resend in Server Actions — replaces Strapi lifecycle hooks | ✓ Good — reliable with Promise.allSettled |
+| Free tier Sanity | Content volume is small, free tier is sufficient | ✓ Good — well within limits |
+| Automated content migration scripts | Ensures accuracy and repeatability vs manual re-entry | ✓ Good — 1,259-line script handled all types |
+| camelCase _type naming convention | Established in Phase 1 before any consumers written — consistent Sanity convention | ✓ Good — zero naming conflicts |
+| Fetch-level cache tags (not unstable_cache) | Simpler caching model, tags applied directly to GROQ fetch calls | ✓ Good — eliminated TTL wrapper complexity |
+| HMAC webhook signature verification | Prevents unauthorized cache purges, crashes at startup if secret missing | ✓ Good — security without silent degradation |
+| Server Actions with module-level 'use server' | Required pattern for standalone action files in Next.js App Router | ✓ Good |
 
-## Evolution
+## Constraints
 
-This document evolves at phase transitions and milestone boundaries.
-
-**After each phase transition** (via `/gsd:transition`):
-1. Requirements invalidated? → Move to Out of Scope with reason
-2. Requirements validated? → Move to Validated with phase reference
-3. New requirements emerged? → Add to Active
-4. Decisions to log? → Add to Key Decisions
-5. "What This Is" still accurate? → Update if drifted
-
-**After each milestone** (via `/gsd:complete-milestone`):
-1. Full review of all sections
-2. Core Value check — still the right priority?
-3. Audit Out of Scope — reasons still valid?
-4. Update Context with current state
+- **Tech stack**: Next.js 16 (App Router), React 18, TypeScript, Tailwind CSS v4 — unchanged
+- **Sanity Studio**: Embedded in Next.js via next-sanity (at /studio route)
+- **Images**: All images served from Sanity CDN with hotspot/crop support
+- **Forms**: Submissions stored as Sanity documents; emails via Resend in Server Actions
+- **Caching**: On-demand ISR via Sanity webhook + revalidateTag; fetch-level cache tags
+- **Compatibility**: Node >=20, npm
+- **Deployment**: Vercel
 
 ---
-*Last updated: 2026-03-28 after Phase 5 completion*
+*Last updated: 2026-03-30 after v1.0 milestone*
