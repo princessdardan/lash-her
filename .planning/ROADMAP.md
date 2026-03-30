@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Rich Text and Portable Text Renderer** - Build brand-styled PortableText renderer, rename legacy rich text component (completed 2026-03-27)
 - [x] **Phase 4: Forms and Email** - Replace Strapi lifecycle hooks with Server Actions writing to Sanity + calling Resend directly (completed 2026-03-27)
 - [x] **Phase 5: Cache Revalidation** - Wire on-demand ISR via Sanity webhook calling revalidateTag (completed 2026-03-28)
-- [ ] **Phase 6: Content Migration and Cleanup** - Run migration scripts against staging then production, verify, and remove Strapi
+- [x] **Phase 6: Content Migration and Cleanup** - Run migration scripts against staging then production, verify, and remove Strapi (completed 2026-03-30)
 
 ## Phase Details
 
@@ -116,7 +116,7 @@ Plans:
 Plans:
 - [x] 06-01-PLAN.md — Build migration script, install nanoid, run migration against production Sanity dataset
 - [x] 06-02-PLAN.md — Delete all Strapi/Blob files, clean utils.ts and next.config.ts, uninstall dead packages
-- [ ] 06-03-PLAN.md — Final verification: full test suite, codebase grep, visual confirmation
+- [x] 06-03-PLAN.md — Final verification: full test suite, codebase grep, visual confirmation
 
 ## Progress
 
@@ -130,4 +130,4 @@ Phases execute in order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 (Phases 3 and 4 can run para
 | 3. Rich Text and Portable Text Renderer | 1/1 | Complete   | 2026-03-27 |
 | 4. Forms and Email | 2/2 | Complete   | 2026-03-27 |
 | 5. Cache Revalidation | 1/1 | Complete   | 2026-03-28 |
-| 6. Content Migration and Cleanup | 2/3 | In Progress|  |
+| 6. Content Migration and Cleanup | 3/2 | Complete   | 2026-03-30 |
