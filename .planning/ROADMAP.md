@@ -111,12 +111,17 @@ Plans:
   3. The production site renders identically to the current Strapi-backed site after cutover, with zero broken pages or missing images
   4. The backend/ directory is deleted and the npm workspaces config no longer references it — `npm install` from the root succeeds
   5. No Strapi environment variables, import paths, or package references remain in the frontend codebase
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [x] 06-01-PLAN.md — Build migration script, install nanoid, run migration against production Sanity dataset
+- [ ] 06-02-PLAN.md — Delete all Strapi/Blob files, clean utils.ts and next.config.ts, uninstall dead packages
+- [ ] 06-03-PLAN.md — Final verification: full test suite, codebase grep, visual confirmation
 
 ## Progress
 
 **Execution Order:**
-Phases execute in order: 1 → 2 → 3 → 4 → 5 → 6 (Phases 3 and 4 can run parallel with Phase 2 development but integrate after Phase 1)
+Phases execute in order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 (Phases 3 and 4 can run parallel with Phase 2 development but integrate after Phase 1)
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -125,4 +130,4 @@ Phases execute in order: 1 → 2 → 3 → 4 → 5 → 6 (Phases 3 and 4 can run
 | 3. Rich Text and Portable Text Renderer | 1/1 | Complete   | 2026-03-27 |
 | 4. Forms and Email | 2/2 | Complete   | 2026-03-27 |
 | 5. Cache Revalidation | 1/1 | Complete   | 2026-03-28 |
-| 6. Content Migration and Cleanup | 0/? | Not started | - |
+| 6. Content Migration and Cleanup | 1/3 | In Progress|  |

@@ -2,14 +2,14 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: Ready to plan
-stopped_at: Phase 6 context gathered
-last_updated: "2026-03-29T19:00:30.370Z"
+status: Ready to execute
+stopped_at: Phase 06-01 complete (Task 1 done, Task 2 awaiting human-action checkpoint)
+last_updated: "2026-03-30T17:56:35.321Z"
 progress:
   total_phases: 6
   completed_phases: 5
-  total_plans: 14
-  completed_plans: 14
+  total_plans: 17
+  completed_plans: 15
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-24)
 
 **Core value:** Every page, form, image, and interaction that works today must work identically after migration — zero regression in the production user experience.
-**Current focus:** Phase 05 — cache-revalidation
+**Current focus:** Phase 06 — content-migration-and-cleanup
 
 ## Current Position
 
-Phase: 6
-Plan: Not started
+Phase: 06 (content-migration-and-cleanup) — EXECUTING
+Plan: 2 of 3
 
 ## Performance Metrics
 
@@ -56,6 +56,7 @@ Plan: Not started
 | Phase 02-data-layer-and-image-pipeline P06 | 192s | 2 tasks | 6 files |
 | Phase 04-forms-and-email P02 | 270s | 2 tasks | 4 files |
 | Phase 05-cache-revalidation P01 | 287 | 2 tasks | 4 files |
+| Phase 06-content-migration-and-cleanup P01 | 480 | 1 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -91,6 +92,9 @@ Recent decisions affecting current work:
 - [Phase 05-cache-revalidation]: Tags use short canonical names ('global', 'menu') not Sanity _type strings — TYPE_TAG_MAP bridges the two naming spaces in the route handler
 - [Phase 05-cache-revalidation]: unstable_cache removed from layout — fetch-level tags handle revalidation without TTL wrapper, simplifying the caching model
 - [Phase 05-cache-revalidation]: SANITY_WEBHOOK_SECRET uses assertValue — app crashes at startup if missing to prevent silent security degradation (accepts unsigned requests)
+- [Phase 06-content-migration-and-cleanup]: Migration script creates its own Sanity client — cannot import write-client.ts due to server-only guard in Next.js context
+- [Phase 06-content-migration-and-cleanup]: Image pre-upload phase runs before document migration — imageCache Map deduplicates identical Strapi images
+- [Phase 06-content-migration-and-cleanup]: createOrReplace with plain _id (no drafts. prefix) creates published documents directly in Sanity
 
 ### Pending Todos
 
@@ -104,6 +108,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-29T19:00:30.366Z
-Stopped at: Phase 6 context gathered
-Resume file: .planning/phases/06-content-migration-and-cleanup/06-CONTEXT.md
+Last session: 2026-03-30T17:56:35.319Z
+Stopped at: Phase 06-01 complete (Task 1 done, Task 2 awaiting human-action checkpoint)
+Resume file: None
