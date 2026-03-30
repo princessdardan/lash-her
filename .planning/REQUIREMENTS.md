@@ -53,20 +53,20 @@ Requirements for the complete Strapi 5 → Sanity CMS migration. Each maps to ro
 
 ### Content Migration
 
-- [ ] **MIG-01**: Automated migration script fetches all content from Strapi REST API, transforms to Sanity document shapes, and writes to Sanity content lake
-- [ ] **MIG-02**: Migration script uploads all images from Strapi to Sanity CDN and updates document references to Sanity asset IDs
-- [ ] **MIG-03**: Migration script converts Strapi Blocks rich text JSON to Sanity Portable Text format
-- [ ] **MIG-04**: Migration script generates `_key` fields for all array items (nanoid) since Strapi uses integer IDs
-- [ ] **MIG-05**: Migration script explicitly publishes all documents after creation (not left as drafts)
+- [x] **MIG-01**: Automated migration script fetches all content from Strapi REST API, transforms to Sanity document shapes, and writes to Sanity content lake
+- [x] **MIG-02**: Migration script uploads all images from Strapi to Sanity CDN and updates document references to Sanity asset IDs
+- [x] **MIG-03**: Migration script converts Strapi Blocks rich text JSON to Sanity Portable Text format
+- [x] **MIG-04**: Migration script generates `_key` fields for all array items (nanoid) since Strapi uses integer IDs
+- [x] **MIG-05**: Migration script explicitly publishes all documents after creation (not left as drafts)
 - [ ] **MIG-06**: Migration verified against production dataset — document counts, image rendering, and page content match source
 
 ### Cleanup
 
-- [ ] **CLEAN-01**: Strapi backend workspace removed from `package.json` workspaces and `backend/` directory deleted
-- [ ] **CLEAN-02**: Strapi-specific packages removed from frontend (`qs`, `@types/qs`)
-- [ ] **CLEAN-03**: Strapi-specific code removed (old `data-api.ts`, `fetchStrapi()` in `utils.ts`, Strapi type definitions)
-- [ ] **CLEAN-04**: Vercel Blob references removed (env var, remote pattern, migration scripts)
-- [ ] **CLEAN-05**: Environment variables updated — Strapi vars removed, Sanity vars added to Vercel
+- [x] **CLEAN-01**: Strapi backend workspace removed from `package.json` workspaces and `backend/` directory deleted
+- [x] **CLEAN-02**: Strapi-specific packages removed from frontend (`qs`, `@types/qs`)
+- [x] **CLEAN-03**: Strapi-specific code removed (old `data-api.ts`, `fetchStrapi()` in `utils.ts`, Strapi type definitions)
+- [x] **CLEAN-04**: Vercel Blob references removed (env var, remote pattern, migration scripts)
+- [x] **CLEAN-05**: Environment variables updated — Strapi vars removed, Sanity vars added to Vercel
 
 ## v2 Requirements
 
@@ -127,17 +127,17 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FORM-04 | Phase 4 | Pending |
 | INFRA-05 | Phase 5 | Complete |
 | INFRA-06 | Phase 5 | Complete |
-| MIG-01 | Phase 6 | Pending |
-| MIG-02 | Phase 6 | Pending |
-| MIG-03 | Phase 6 | Pending |
-| MIG-04 | Phase 6 | Pending |
-| MIG-05 | Phase 6 | Pending |
+| MIG-01 | Phase 6 | Complete |
+| MIG-02 | Phase 6 | Complete |
+| MIG-03 | Phase 6 | Complete |
+| MIG-04 | Phase 6 | Complete |
+| MIG-05 | Phase 6 | Complete |
 | MIG-06 | Phase 6 | Pending |
-| CLEAN-01 | Phase 6 | Pending |
-| CLEAN-02 | Phase 6 | Pending |
-| CLEAN-03 | Phase 6 | Pending |
-| CLEAN-04 | Phase 6 | Pending |
-| CLEAN-05 | Phase 6 | Pending |
+| CLEAN-01 | Phase 6 | Complete |
+| CLEAN-02 | Phase 6 | Complete |
+| CLEAN-03 | Phase 6 | Complete |
+| CLEAN-04 | Phase 6 | Complete |
+| CLEAN-05 | Phase 6 | Complete |
 
 **Coverage:**
 - v1 requirements: 37 total

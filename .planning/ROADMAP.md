@@ -115,7 +115,7 @@ Plans:
 
 Plans:
 - [x] 06-01-PLAN.md — Build migration script, install nanoid, run migration against production Sanity dataset
-- [ ] 06-02-PLAN.md — Delete all Strapi/Blob files, clean utils.ts and next.config.ts, uninstall dead packages
+- [x] 06-02-PLAN.md — Delete all Strapi/Blob files, clean utils.ts and next.config.ts, uninstall dead packages
 - [ ] 06-03-PLAN.md — Final verification: full test suite, codebase grep, visual confirmation
 
 ## Progress
@@ -130,4 +130,4 @@ Phases execute in order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 (Phases 3 and 4 can run para
 | 3. Rich Text and Portable Text Renderer | 1/1 | Complete   | 2026-03-27 |
 | 4. Forms and Email | 2/2 | Complete   | 2026-03-27 |
 | 5. Cache Revalidation | 1/1 | Complete   | 2026-03-28 |
-| 6. Content Migration and Cleanup | 1/3 | In Progress|  |
+| 6. Content Migration and Cleanup | 2/3 | In Progress|  |
