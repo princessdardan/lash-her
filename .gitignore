@@ -1,3 +1,14 @@
+# dependencies
+node_modules/
+package-lock.json
+*.tgz
+
+# OS
+.DS_Store
+
+# claude worktrees
+.claude/worktrees/
+
 .claude/skills/ui-ux-pro-max/data/charts.csv
 .claude/skills/ui-ux-pro-max/data/colors.csv
 .claude/skills/ui-ux-pro-max/data/icons.csv
